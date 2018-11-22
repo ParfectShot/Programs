@@ -1,5 +1,7 @@
 import os
+# input of directory path
 dirname = input()
+# function listing all the files in that directory and subdirectories inside it
 def listfiles(dirname):
     files = os.listdir(dirname)
     all = list()
@@ -12,4 +14,6 @@ def listfiles(dirname):
         else:
                 all.append(fpath)
     return all
-print(listfiles(dirname))
+# loop iterating though list returned by listfiles function and printong all the names of the files
+for x in listfiles(dirname):
+    print(x)
